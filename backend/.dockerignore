@@ -1,0 +1,34 @@
+# Dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Environment variables (Secrets should be passed via docker-compose)
+.env
+.env.*
+
+# Git
+.git
+.gitignore
+
+# Build output
+dist
+build
+
+# Logs
+logs
+*.log
+
+# Docker related
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# HEAVY FILES (Crucial: We mount these via Volume, so don't copy them into the image)
+public/pyqs
+public/uploads
+
+# IDE/Editor
+.vscode
+.idea
+*.swp

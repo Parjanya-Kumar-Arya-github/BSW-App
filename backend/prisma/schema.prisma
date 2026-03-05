@@ -1,0 +1,437 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-arm64-openssl-1.1.x", "linux-arm64-openssl-1.0.x", "linux-arm64-openssl-3.0.x", "debian-openssl-1.1.x"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  // Identity
+  name          String
+  kerberosId    String? @unique
+  email         String  @unique
+  personalEmail String?
+  password      String?
+
+  // Verification
+  isEmailVerified Boolean @default(false)
+
+  // Profile
+  dob         DateTime?
+  bio         String?
+  avatar      String?
+  gender      Gender    @default(OTHERS)
+  phoneNumber String?   @unique
+
+  // Academic Info
+  department  String?
+  yearOfStudy Int?
+  hostel      Hostel?
+  program     String?
+
+  // System Status
+  role        Role[]   @default([USER])
+  isOnboarded Boolean  @default(false)
+  isExternal  Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  notices         Notice[] @relation("UserNotices")
+  reviewedNotices Notice[] @relation("AdminReviewedNotices")
+
+  pushSubscriptions    PushSubscription[]
+  notificationStatus   NotificationStatus[]
+  subscribedChannelIds String[]              @db.ObjectId
+  subscribedChannels   NotificationChannel[] @relation(fields: [subscribedChannelIds], references: [id])
+
+  complaints Complaint[] @relation("UserComplaints")
+  feedbacks  Feedback[]  @relation("UserFeedbacks")
+
+  complaintReplies      ComplaintReply[] @relation("UserComplaintReplies")
+  adminComplaintReplies ComplaintReply[] @relation("AdminComplaintReplies")
+
+  complaintUpvotes       ComplaintUpvote[]
+  complaintDownvotes     ComplaintDownvote[]
+  replyUpvotes           ReplyUpvote[]
+  replyDownvotes         ReplyDownvote[]
+  notificationRecipients NotificationRecipient[]
+}
+
+model NotificationRecipient {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  notificationId String @db.ObjectId
+  userId         String @db.ObjectId
+
+  notification Notification @relation(fields: [notificationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  isRead      Boolean   @default(false)
+  deliveredAt DateTime? @default(now())
+  readAt      DateTime?
+
+  @@unique([notificationId, userId])
+  @@index([userId])
+  @@index([notificationId])
+}
+
+model Otp {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  otp       String
+  type      OtpType  @default(SIGNUP)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OnboardingToken {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  // Data to prefill during onboarding
+  email       String   @unique
+  name        String
+  dob         DateTime
+  gender      Gender
+  phoneNumber String
+
+  // Token security
+  tokenHash String   @unique
+  expiresAt DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PasswordResetToken {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Complaint {
+  id          String              @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  category    ComplaintCategory
+  priority    ComplaintPriority   @default(MEDIUM)
+  isAnonymous Boolean             @default(false)
+  status      ComplaintStatus     @default(PENDING)
+  resolvedAt  DateTime?
+  userId      String?             @db.ObjectId
+  user        User?               @relation("UserComplaints", fields: [userId], references: [id])
+  replies     ComplaintReply[]
+  upvotes     ComplaintUpvote[]
+  downvotes   ComplaintDownvote[]
+  attachments Attachment[]
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+}
+
+model ComplaintReply {
+  id          String          @id @default(auto()) @map("_id") @db.ObjectId
+  content     String
+  complaintId String          @db.ObjectId
+  complaint   Complaint       @relation(fields: [complaintId], references: [id], onDelete: Cascade)
+  userId      String?         @db.ObjectId
+  user        User?           @relation("UserComplaintReplies", fields: [userId], references: [id])
+  adminId     String?         @db.ObjectId
+  admin       User?           @relation("AdminComplaintReplies", fields: [adminId], references: [id])
+  upvotes     ReplyUpvote[]
+  downvotes   ReplyDownvote[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+model ComplaintUpvote {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String    @db.ObjectId
+  complaintId String    @db.ObjectId
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  complaint   Complaint @relation(fields: [complaintId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, complaintId])
+}
+
+model ComplaintDownvote {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String    @db.ObjectId
+  complaintId String    @db.ObjectId
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  complaint   Complaint @relation(fields: [complaintId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, complaintId])
+}
+
+model ReplyUpvote {
+  id      String         @id @default(auto()) @map("_id") @db.ObjectId
+  userId  String         @db.ObjectId
+  replyId String         @db.ObjectId
+  user    User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reply   ComplaintReply @relation(fields: [replyId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, replyId])
+}
+
+model ReplyDownvote {
+  id      String         @id @default(auto()) @map("_id") @db.ObjectId
+  userId  String         @db.ObjectId
+  replyId String         @db.ObjectId
+  user    User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reply   ComplaintReply @relation(fields: [replyId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, replyId])
+}
+
+model Feedback {
+  id          String         @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  type        FeedbackType
+  status      FeedbackStatus @default(SUBMITTED)
+  userId      String?        @db.ObjectId
+  user        User?          @relation("UserFeedbacks", fields: [userId], references: [id])
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model Notice {
+  id              String         @id @default(auto()) @map("_id") @db.ObjectId
+  userId          String?        @db.ObjectId
+  user            User?          @relation("UserNotices", fields: [userId], references: [id])
+  requesterName   String
+  email           String
+  mobile          String
+  organization    String
+  category        NoticeCategory
+  categoryOther   String?
+  subject         String
+  content         String
+  recipients      RecipientType
+  recipientsOther String?
+  preferredDate   DateTime
+  preferredTime   String
+  notes           String?
+  status          NoticeStatus   @default(PENDING)
+  reviewedById    String?        @db.ObjectId
+  reviewedBy      User?          @relation("AdminReviewedNotices", fields: [reviewedById], references: [id])
+  reviewedAt      DateTime?
+  attachments     Attachment[]
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([status])
+}
+
+model Attachment {
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  fileName    String
+  fileType    String
+  fileSize    Int
+  fileUrl     String
+  noticeId    String?    @db.ObjectId
+  notice      Notice?    @relation(fields: [noticeId], references: [id], onDelete: Cascade)
+  complaintId String?    @db.ObjectId
+  complaint   Complaint? @relation(fields: [complaintId], references: [id], onDelete: Cascade)
+  createdAt   DateTime   @default(now())
+
+  @@index([noticeId])
+  @@index([complaintId])
+}
+
+model PushSubscription {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  endpoint  String   @unique
+  p256dh    String
+  auth      String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model NotificationChannel {
+  id            String         @id @default(auto()) @map("_id") @db.ObjectId
+  name          String         @unique
+  slug          String         @unique
+  description   String?
+  isDefault     Boolean        @default(false)
+  subscriberIds String[]       @db.ObjectId
+  subscribers   User[]         @relation(fields: [subscriberIds], references: [id])
+  notifications Notification[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model Notification {
+  id                     String                  @id @default(auto()) @map("_id") @db.ObjectId
+  title                  String
+  message                String
+  link                   String?
+  type                   NotificationType        @default(INFO)
+  scope                  NotificationScope
+  channelId              String?                 @db.ObjectId
+  channel                NotificationChannel?    @relation(fields: [channelId], references: [id])
+  targetUserId           String?                 @db.ObjectId
+  sentVia                DeliveryMethod[]
+  isSent                 Boolean                 @default(false)
+  statuses               NotificationStatus[]
+  createdAt              DateTime                @default(now())
+  notificationRecipients NotificationRecipient[]
+}
+
+model NotificationStatus {
+  id             String       @id @default(auto()) @map("_id") @db.ObjectId
+  userId         String       @db.ObjectId
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  notificationId String       @db.ObjectId
+  notification   Notification @relation(fields: [notificationId], references: [id], onDelete: Cascade)
+  isRead         Boolean      @default(false)
+  readAt         DateTime?
+  isDelivered    Boolean      @default(false)
+
+  @@unique([userId, notificationId])
+  @@index([userId, isRead])
+}
+
+model NoticeRecord {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  email       String
+  entryNumber String
+  phoneNumber String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model FileTree {
+  id   String @id @default("file_tree") @map("_id")
+  tree Json
+}
+
+enum ComplaintStatus {
+  PENDING
+  IN_PROGRESS
+  RESOLVED
+  REJECTED
+}
+
+enum ComplaintPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum ComplaintCategory {
+  HOSTEL_MAINTENANCE
+  ACADEMIC_ISSUES
+  MESS_FOOD
+  INTERNET_WIFI
+  SANITATION
+  SECURITY
+  OTHER
+}
+
+enum FeedbackType {
+  COMPLAINT
+  SUGGESTION
+  PRAISE
+  SYSTEM_BUG
+}
+
+enum FeedbackStatus {
+  SUBMITTED
+  REVIEWED
+  ACTION_TAKEN
+  IGNORED
+}
+
+enum Role {
+  USER
+  MENTOR
+  ADMIN
+  SUPERADMIN
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHERS
+}
+
+enum Hostel {
+  ARAVALI
+  JWALAMUKHI
+  NILGIRI
+  KARAKORAM
+  GIRNAR
+  KAILASH
+  HIMADRI
+  SAHYADRI
+  SATPURA
+  UDAIGIRI
+  KUMAON
+  SHIVALIK
+  ZANSKAR
+  VINDHYACHAL
+  DRONAGIRI
+  SAPTGIRI
+  OTHER
+}
+
+enum OtpType {
+  SIGNUP
+}
+
+enum NotificationScope {
+  GLOBAL
+  CHANNEL
+  INDIVIDUAL
+}
+
+enum NotificationType {
+  INFO
+  SUCCESS
+  WARNING
+  ERROR
+  ACTION_REQUIRED
+}
+
+enum DeliveryMethod {
+  IN_APP
+  EMAIL
+  PUSH
+}
+
+enum NoticeCategory {
+  ACADEMIC
+  ADMINISTRATIVE
+  HOSTEL_STUDENT_WELLNESS
+  CLUB_EVENT
+  INTERNSHIP_OPPORTUNITY
+  OTHERS
+}
+
+enum RecipientType {
+  ENTIRE_CAMPUS
+  UG_ONLY
+  PG_ONLY
+  SPECIFIC_DEPARTMENT
+  SPECIFIC_HOSTEL
+  OTHERS
+}
+
+enum NoticeStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}

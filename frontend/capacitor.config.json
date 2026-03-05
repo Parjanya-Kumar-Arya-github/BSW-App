@@ -1,0 +1,10 @@
+{
+  "appId": "com.bsw.iitdelhi",
+  "appName": "BSW IIT Delhi",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "capacitor",
+    "iosScheme": "capacitor",
+    "cleartext": true
+  }
+}

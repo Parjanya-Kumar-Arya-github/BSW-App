@@ -1,0 +1,722 @@
+{
+  "2025-26":{
+    "sections": {
+      "Admins": {
+        "section": {
+          "Dean of Student affair": [
+            {
+              "name": "Prof. B. K. Panigrahi",
+              "position": "Dean, Student Affairs",
+              "image": "/imgs/dosa-1.jpg",
+              "mail": "deansa@admin.iitd.ac.in",
+              "phone": ""
+            },
+            {
+              "name": "Prof. Sreedevi Upadhyayula",
+              "position": "Associate Dean, Student Welfare",
+              "image": "/imgs/dosa-2.jpg",
+              "mail": "adsw@admin.iitd.ac.in",
+              "phone": ""
+            }
+          ]
+        }
+      },
+      "Student Team": {
+        "section": {
+          "Main Secretary": [
+            {
+              "name": "Jivant Garg",
+              "position": "General Secretary",
+              "image": "/imgs/team2025/g1.jpg",
+              "mail": "deansa@admin.iitd.ac.in",
+              "hostel": "Shivalik",
+              "phone": "7087638156"
+            },
+            {
+              "name": "Advik Gupta",
+              "position": "Deputy General Secretary (Operations)",
+              "image": "/imgs/team2025/dg1.jpg",
+              "mail": "adsw@admin.iitd.ac.in",
+              "hostel": "Girnar",
+              "phone": "9136353802"
+            },
+            {
+              "name": "Vishal Baghel",
+              "position": "Deputy General Secretary (Mentorship)",
+              "image": "/imgs/team2025/dg2.jpg",
+              "mail": "deansa@admin.iitd.ac.in",
+              "hostel": "Jwalamukhi",
+              "phone": "8533065575"
+            }
+          ],
+          "Coordinators": [
+            {
+              "name": "Aniket Anand",
+              "position": "Career Guide Coordinator",
+              "image": "/imgs/team2025/coord1.jpg",
+              "mail": "deansa@admin.iitd.ac.in",
+              "hostel": "Girnar",
+              "phone": "9304497306"
+            },
+            {
+              "name": "Avani Kumar",
+              "position": "Academic Coordinator",
+              "image": "/imgs/team2025/coord2.jpg",
+              "mail": "deansa@admin.iitd.ac.in",
+              "hostel": "Himadri ",
+              "phone": "8840372918"
+            },
+            {
+              "name": "Pratyush Shrivastava",
+              "position": "Mental Health Coordinator",
+              "image": "/imgs/team2025/coord3.JPG",
+              "mail": "adsw@admin.iitd.ac.in",
+              "hostel": "Udaigiri",
+              "phone": "7024559367"
+            },
+            {
+              "name": "Pranav Misra",
+              "position": "Language Coordinator",
+              "image": "/imgs/team2025/coord4.png",
+              "mail": "deansa@admin.iitd.ac.in",
+              "hostel": "Karakoram ",
+              "phone": "7408231368"
+            }
+          ],
+          "Secretaries": [
+            {
+              "name": "Amol Gupta",
+              "position": "",
+              "image": "/imgs/team2025/secy1.JPG",
+              "mail": "deansa@admin.iitd.ac.in",
+              "phone": "9999519678"
+            },
+            {
+              "name": "Harshit Gour",
+              "position": "",
+              "image": "/imgs/team2025/secy2.jpg",
+              "mail": "adsw@admin.iitd.ac.in",
+              "phone": ""
+            },
+            {
+              "name": "Devesh Sharma",
+              "position": "",
+              "image": "/imgs/team2025/secy3.webp",
+              "mail": "deansa@admin.iitd.ac.in",
+              "phone": ""
+            },
+            {
+              "name": "Puranjay Chand",
+              "position": "",
+              "image": "/imgs/team2025/secy4.jpg",
+              "mail": "deansa@admin.iitd.ac.in",
+              "phone": ""
+            }
+          ],
+          "Representatives": [
+            {
+              "name": "Aditya Pandey",
+              "phone_no": "9893632386",
+              "webmail": "me1240005@iitd.ac.in",
+              "hostel": "Girnar",
+              "image": "/imgs/team2025/1.jpeg"
+            },
+            {
+              "name": "Arnav Choudhary",
+              "phone_no": "9461376136",
+              "webmail": "am1241182@iitd.ac.in",
+              "hostel": "Girnar",
+              "image": "/imgs/team2025/2.jpg"
+            },
+            {
+              "name": "Swayam Gupta",
+              "phone_no": "7977076335",
+              "webmail": "ce1240712@iitd.ac.in",
+              "hostel": "Shivalik",
+              "image": "/imgs/team2025/3.jpg"
+            },
+            {
+              "name": "Chaitanya Singla",
+              "phone_no": "7888399638",
+              "webmail": "me2240637@mech.iitd.ac.in",
+              "hostel": "Shivalik",
+              "image": "/imgs/team2025/4.jpg"
+            },
+            {
+              "name": "Aryan Rana",
+              "phone_no": "8373939236",
+              "webmail": "bb1240084@dbeb.iitd.ac.in",
+              "hostel": "Aravali",
+              "image": "/imgs/team2025/5.png"
+            },
+            {
+              "name": "Hardik Mahajan",
+              "phone_no": "8439304486",
+              "webmail": "Ch7240571@iitd.ac.in",
+              "hostel": "Aravali",
+              "image": "/imgs/team2025/6.jpg"
+            },
+            {
+              "name": "Soham Gupta",
+              "phone_no": "9667208460",
+              "webmail": "me1240632@iitd.ac.in",
+              "hostel": "Nilgiri",
+              "image": "/imgs/team2025/7.jpeg"
+            },
+            {
+              "name": "Parteek Kumar",
+              "phone_no": "7589044443",
+              "webmail": "ch7240144@chemical.iitd.ac.in",
+              "hostel": "Nilgiri",
+              "image": "/imgs/team2025/8.jpeg"
+            },
+            {
+              "name": "Anirudh Jassal ",
+              "phone_no": "70871-49394",
+              "webmail": "ee3240899@ee.iitd.ac.in",
+              "hostel": "Satpura ",
+              "image": "/imgs/team2025/9.jpg"
+            },
+            {
+              "name": "Agrim Jain",
+              "phone_no": "9760222666",
+              "webmail": "ch1240613@iitd.ac.in",
+              "hostel": "Satpura",
+              "image": "/imgs/team2025/10.jpeg"
+            },
+            {
+              "name": "Daksh Chauhan ",
+              "phone_no": "8968780360",
+              "webmail": "cs1240382@cse.iitd.ac.in",
+              "hostel": "Zanskar ",
+              "image": "/imgs/team2025/11.jpg"
+            },
+            {
+              "name": "Ashmit Kheterpal",
+              "phone_no": "9319001201",
+              "webmail": "me1240761@mech.iitd.ac.in",
+              "hostel": "Zanskar",
+              "image": "/imgs/team2025/12.jpg"
+            },
+            {
+              "name": "Keshav Garg",
+              "phone_no": "9201322867",
+              "webmail": "mt6241003@maths.iitd.ac.in",
+              "hostel": "Jwalamukhi",
+              "image": "/imgs/team2025/13.jpg"
+            },
+            {
+              "name": "Lucky Negi",
+              "phone_no": "9259168235",
+              "webmail": "bb1240890@iitd.ac.in",
+              "hostel": "Jwalamukhi",
+              "image": "/imgs/team2025/14.jpg"
+            },
+            {
+              "name": "Satyarth Pandey",
+              "phone_no": "8887059219",
+              "webmail": "ee1240602@iitd.ac.in",
+              "hostel": "Udaigiri",
+              "image": "/imgs/team2025/15.jpeg"
+            },
+            {
+              "name": "Aum Savaliya",
+              "phone_no": "2024ME20065",
+              "webmail": "me2240065@iitd.ac.in",
+              "hostel": "Udaigiri",
+              "image": "/imgs/team2025/16.jpg"
+            },
+            {
+              "name": "Maitri Bansal",
+              "phone_no": "7347258546",
+              "webmail": "ee1240232@ee.iitd.ac.in",
+              "hostel": "Himadri",
+              "image": "/imgs/team2025/17.jpg"
+            },
+            {
+              "name": "Maitri Surana ",
+              "phone_no": "Contact No. 8949881229 Whatsapp No. 7740979280",
+              "webmail": "tt1241042@iitd.ac.in",
+              "hostel": "Himadri ",
+              "image": "/imgs/team2025/18.jpg"
+            },
+            {
+              "name": "Vivek Kumar Sharma ",
+              "phone_no": "7417105403",
+              "webmail": "ch1240114@iitd.ac.in",
+              "hostel": "Karakoram ",
+              "image": "/imgs/team2025/19.jpg"
+            },
+            {
+              "name": "Krishna Chadha",
+              "phone_no": "9354627255",
+              "webmail": "es1240520@iitd.ac.in",
+              "hostel": "Karakoram",
+              "image": "/imgs/team2025/20.jpg"
+            },
+            {
+              "name": "Aditya Singal",
+              "phone_no": "9331045664",
+              "webmail": "ce1240851@iitd.ac.in",
+              "hostel": "Vindhyachal ",
+              "image": "/imgs/team2025/21.jpeg"
+            },
+            {
+              "name": "Madhav Bansal ",
+              "phone_no": "8595769007",
+              "webmail": "mt1240756@maths.iitd.ac.in",
+              "hostel": "Vindhyachal",
+              "image": "/imgs/team2025/22.jpg"
+            },
+            {
+              "name": "Yuvraj Shankar ",
+              "phone_no": "8860362000",
+              "webmail": "tt1240718@iitd.ac.in",
+              "hostel": "Kumaon",
+              "image": "/imgs/team2025/23.png"
+            },
+            {
+              "name": "Tanish Arya",
+              "phone_no": "9818635723",
+              "webmail": "ch7240483@iitd.ac.in",
+              "hostel": "Kumaon",
+              "image": "/imgs/team2025/24.png"
+            },
+            {
+              "name": "Ditya Goel",
+              "phone_no": "9625703402",
+              "webmail": "ee3240389@iitd.ac.in",
+              "hostel": "Kailash",
+              "image": "/imgs/team2025/25.png"
+            },
+            {
+              "name": "Agrima Agarwal",
+              "phone_no": "7249970541",
+              "webmail": "ce1241019@civil.iitd.ac.in",
+              "hostel": "Kailash",
+              "image": "/imgs/team2025/26.jpg"
+            },
+            {
+              "name": "Neha",
+              "phone_no": "8287500989",
+              "webmail": "",
+              "hostel": "Saptagiri ",
+              "image": "/imgs/team2025/27.jpg"
+            },
+            {
+              "name": "Songita Das ",
+              "phone_no": "8527784294",
+              "webmail": "bsz228102@iitd.ac.in",
+              "hostel": "Saptagiri ",
+              "image": "/imgs/team2025/28.jpg"
+            },
+            {
+              "name": "Manshi Raj",
+              "phone_no": "9341189534",
+              "webmail": "hst244624@iitd.ac.in",
+              "hostel": "Nalanda",
+              "image": "/imgs/team2025/29.jpg"
+            },
+            {
+              "name": "Lily Jerisha",
+              "phone_no": "7373373380",
+              "webmail": "",
+              "hostel": "Nalanda",
+              "image": "/imgs/team2025/30.jpg"
+            },
+            {
+              "name": "Debarti Chakraborty",
+              "phone_no": "",
+              "webmail": "",
+              "hostel": "Sahaydri",
+              "image": "/imgs/team2025/31.jpg"
+            },
+            {
+              "name": "Babra Rubiya",
+              "phone_no": "889993581",
+              "webmail": "",
+              "hostel": "Sahaydri",
+              "image": "/imgs/team2025/32.jpg"
+            },
+            {
+              "name": "Pranjal",
+              "phone_no": "7222949961",
+              "webmail": "",
+              "hostel": "Dronagiri",
+              "image": "/imgs/team2025/33.jpeg"
+            }
+          ]
+        }
+      },
+      "Tech Team": {
+        "section": {
+          "Advisor": [
+            {
+              "timestamp": "16/11/2025 13:34:20",
+              "name": "Shriji Barot",
+              "entryNumber": "2022ME22096",
+              "department": "Production And Industrial",
+              "linkedin": "www.linkedin.com/in/shriji-barot-iitd",
+              "instagram": "barotshriji_2411",
+              "email": [
+                "barotshriji2411@gmail.com"
+              ],
+              "position": "Advisor",
+              "photo": "shriji_barot_photo.jpg"
+            }
+          ],
+          "Coordinators": [
+            {
+              "timestamp": "12/11/2025 22:08:50",
+              "name": "Rohit",
+              "entryNumber": "2023CE10581",
+              "department": "Civil Engineering",
+              "linkedin": "https://www.linkedin.com/in/rohit-kumar-ab0b412b7/",
+              "instagram": "https://www.instagram.com/rohit541_0/",
+              "email": [
+                "rohitkumar240iit@gmail.com"
+              ],
+              "position": "Technical Coordinator",
+              "photo": "rohit_photo.jpg"
+            },
+            {
+              "timestamp": "10/12/2025 09:55:22",
+              "name": "Sarvik",
+              "entryNumber": "2023AM10351",
+              "department": "Applied Mechanics",
+              "linkedin": "https://www.linkedin.com/in/sarvik-mehta-72267a28a",
+              "instagram": "https://www.instagram.com/ravoit_5012/",
+              "email": [
+                "sarvik.iitd@gmail.com"
+              ],
+              "position": "Technical Coordinator",
+              "photo": "sarvik_mehta_photo.jpg"
+            }
+          ],
+          "Executives": [
+            {
+              "timestamp": "12/11/2025 22:05:39",
+              "name": "Akshat Khandelwal",
+              "entryNumber": "2024EE10092",
+              "department": "Electrical Engineering",
+              "linkedin": "https://www.linkedin.com/in/akshat-khandelwal-48a151318/",
+              "email": [
+                "reachakshat6@gmail.com",
+                "ee1240092@ee.iitd.ac.in"
+              ],
+              "position": "Technical Executive",
+              "photo": "akshat_khandelwal.jpeg"
+            },
+            {
+              "timestamp": "12/11/2025 22:05:39",
+              "name": "Parjanya Kumar Arya",
+              "entryNumber": "2025AM11304",
+              "department": "Applied Mechanics",
+              "linkedin": "https://www.linkedin.com/in/parjanyakumararya/",
+              "instagram": "https://www.instagram.com/theeparjanya/",
+              "email": [
+                "Parjanya789@gmail.com",
+                "am1251304@iitd.ac.in"
+              ],
+              "position": "Technical Executive",
+              "photo": "parjanaya_kumar_aditya_photo.jpg"
+            },
+            {
+              "timestamp": "12/11/2025 23:17:33",
+              "name": "Divyansh Nagpal",
+              "entryNumber": "2025CE12129",
+              "department": "Civil",
+              "linkedin": "www.linkedin.com/in/divyansh-nagpal-75337a387",
+              "instagram": "none",
+              "email": [
+                "divyanshnagpal776@gmail.com"
+              ],
+              "position": "Technical Executive",
+              "photo": "divyansh_nagpal.png"
+            },
+            {
+              "timestamp": "10/12/2025 21:15:16",
+              "name": "Prabhav",
+              "entryNumber": "2024MS10195",
+              "department": "Material Science",
+              "linkedin": "https://www.linkedin.com/in/prabhav-agnihotri-0b0ba2312",
+              "instagram": "https://www.instagram.com/prabhav_2503",
+              "email": [
+                "prabhav589@gmail.com"
+              ],
+              "position": "Technical Executive",
+              "photo": "prabhav_agnihotri_photo.jpg"
+            },
+            {
+              "timestamp": "13/11/2025 16:16:24",
+              "name": "Laxmi Yadav",
+              "entryNumber": "2024BB10462",
+              "department": "Biotechnology and biochemical engineering",
+              "linkedin": "www.linkedin.com/in/laxmi-yadav-a97235378",
+              "instagram": "https://www.instagram.com/yd_lax/",
+              "email": [
+                "ydvlaxmi1246@gmail.com"
+              ],
+              "position": "Technical Executive",
+              "photo": "laxmi_yadav_photo.jpg"
+            },
+            {
+              "timestamp": "14/11/2025 21:47:12",
+              "name": "Anushka Singh",
+              "entryNumber": "2024ME10895",
+              "department": "Mechanical Engineering",
+              "linkedin": "linkedin.com/in/anushka-singh-915117324/",
+              "instagram": "https://www.instagram.com/_singhanushka__/",
+              "email": [
+                "anushka.singh020307@gmail.com"
+              ],
+              "position": "Technical Executive",
+              "photo": "anushka_singh_photo.jpg"
+            },
+            {
+              "timestamp": "09/12/2025 11:18:04",
+              "name": "Kartik Sharma",
+              "entryNumber": "2024EE11092",
+              "department": "Electrical",
+              "linkedin": "https://www.linkedin.com/in/kartik-sharma-22282b359/",
+              "instagram": "https://www.instagram.com/kartik_sharma_10_/",
+              "email": [
+                "kartikgautam396@gmail.com"
+              ],
+              "position": "Technical Executive",
+              "photo": "karthik_gautam_photo.jpg"
+            },
+            {
+              "timestamp": "09/12/2025 11:19:16",
+              "name": "Lovish Kumar",
+              "entryNumber": "2025AM11307",
+              "department": "Applied Mechanics",
+              "linkedin": "https://www.linkedin.com/in/lovish-kumar-13aa1a36b/",
+              "instagram": "https://www.instagram.com/not.lovish/",
+              "email": [
+                "lovishkumardev@gmail.com"
+              ],
+              "position": "Technical Executive",
+              "photo": "lovish_meghwanshi_photo.jpeg"
+            },
+            {
+              "timestamp": "09/12/2025 11:23:34",
+              "name": "Ashmit Kaushik",
+              "entryNumber": "2025ME21433",
+              "department": "Mechanical Engineering",
+              "linkedin": "https://www.linkedin.com/in/ashmit-kaushik-9b2806393/",
+              "instagram": "https://www.instagram.com/ashmitkaushik25/",
+              "email": [
+                "ashmit.kaushik25@gmail.com"
+              ],
+              "position": "Technical Executive",
+              "photo": "ashmit_kaushik_photo.jpg"
+            }
+          ]
+        }
+      },
+      "Design Team": {
+        "section": {
+          "Design Team": [
+            {
+              "timestamp": "12/11/2025 22:27:03",
+              "name": "Karan Singh",
+              "entryNumber": "2023CE10841",
+              "department": "Civil Engineering",
+              "linkedin": "https://www.linkedin.com/in/karan-singh-a95820290",
+              "instagram": "https://www.instagram.com/the_karan.22",
+              "email": [
+                "ce1230841@civil.iitd.ac.in"
+              ],
+              "position": "Design Coordinator",
+              "photo": "karan_singh_photo.jpg"
+            },
+            {
+              "timestamp": "13/11/2025 00:44:32",
+              "name": "Lakshay",
+              "entryNumber": "2023CE10637",
+              "department": "Civil Engineering",
+              "linkedin": "https://www.linkedin.com/in/lakshay-aa7510293/",
+              "instagram": "lak.sha.y7",
+              "email": [
+                "lakshayf9@gmail.com"
+              ],
+              "position": "Design Coordinator",
+              "photo": "lakshay_goel_photo.jpg"
+            },
+            {
+              "timestamp": "13/11/2025 18:01:57",
+              "name": "Chahak Shah",
+              "entryNumber": "2023ES11081",
+              "department": "Energy",
+              "linkedin": "https://www.linkedin.com/in/chahak-shah/",
+              "instagram": "https://www.instagram.com/chahakshah_/",
+              "email": [
+                "chahakshah123@gmail.com"
+              ],
+              "position": "Design Coordinator",
+              "photo": "chahak_shah_photo.jpg"
+            },
+            {
+              "timestamp": "12/11/2025 22:27:42",
+              "name": "Aditya Raychand",
+              "entryNumber": "2024MS10377",
+              "department": "Materials Science Engineering",
+              "linkedin": "https://www.linkedin.com/in/aditya-raychand-152357378",
+              "instagram": "https://www.instagram.com/aditya_raychand_24",
+              "email": [
+                "adityaraychand828@gmail.com"
+              ],
+              "position": "Design Executive",
+              "photo": "aditya_raichand_photo.jpg"
+            },
+            {
+              "timestamp": "12/11/2025 23:31:12",
+              "name": "Hardik Agrawal",
+              "entryNumber": "2024ME20945",
+              "department": "Mechanical",
+              "linkedin": "www.linkedin.com/in/hardikag22",
+              "instagram": "https://www.instagram.com/imvengeance07_/",
+              "email": [
+                "hardikiitd24@gmail.com"
+              ],
+              "position": "Design Executive",
+              "photo": "hardik_agrawal_photo.jpg"
+            },
+            {
+              "timestamp": "13/11/2025 02:18:40",
+              "name": "Yash Shrivastava",
+              "entryNumber": "2024AM10507",
+              "department": "AM1",
+              "linkedin": "https://www.linkedin.com/in/yash-shrivastava-5b01b8322/",
+              "instagram": "yash.sh_13",
+              "email": [
+                "yashshrivastava9a@gmail.com"
+              ],
+              "position": "Design Executive",
+              "photo": "yash_shrivastava_photo.jpg"
+            },
+            {
+              "timestamp": "09/12/2025 11:18:34",
+              "name": "Aditya Banka",
+              "entryNumber": "2024CH10687",
+              "department": "Chemical",
+              "linkedin": "https://www.linkedin.com/in/aditya-banka-55b151375/",
+              "instagram": "https://www.instagram.com/adityabanka_/",
+              "email": [
+                "ch1240687@iitd.ac.in"
+              ],
+              "position": "Design Executive",
+              "photo": "aditya_banka_photo.jpg"
+            },
+            {
+              "timestamp": "09/12/2025 18:12:56",
+              "name": "Pihu Upadhyay",
+              "entryNumber": "2024ME10955",
+              "department": "Mechanical",
+              "linkedin": "https://www.linkedin.com/in/pihu-upadhyay-b8404a240/",
+              "instagram": "",
+              "email": [
+                "me1240955@iitd.ac.in",
+                "pihuupadhyay2006@gmail.com"
+              ],
+              "position": "Design Executive",
+              "photo": "pihu_upadhaya_photo.jpg"
+            }
+          ]
+        }
+      }
+    },
+    "Counsellors": {
+      "section": {
+        "Counsellors": [
+          {
+            "name": "Ms. Nishtha Sharma",
+            "position": "Consultant (Student Counsellor)",
+            "photo": "1.jpeg",
+            "mail": "nishtha95@admin.iitd.ac.in"
+          },
+          {
+            "name": "Ms. Devyani Jaipuriar",
+            "position": "Project Counsellor",
+            "photo": "2.jpeg",
+            "mail": "devyani0298@gmail.com"
+          },
+          {
+            "name": "Ms. Anjana",
+            "position": "Consultant (Student Counsellor)",
+            "photo": "3.jpeg",
+            "mail": "anj99@admin.iitd.ac.in"
+          },
+          {
+            "name": "Ms. Nisha",
+            "position": "Consultant (Student Counsellor)",
+            "photo": "4.jpeg",
+            "mail": "knisha@admin.iitd.ac.in"
+          },
+          {
+            "name": "Ms. Anisha Batra",
+            "position": "Project Counsellor",
+            "photo": "5.jpeg",
+            "mail": "anishabatra3@gmail.com"
+          },
+          {
+            "name": "Ms. Chandni Chakravarty",
+            "position": "Project Counsellor",
+            "photo": "6.jpeg",
+            "mail": "chandni.chakr@gmail.com"
+          },
+          {
+            "name": "Ms. Samriddhi",
+            "position": "Wellbeing Counsellor (OS)",
+            "photo": "7.jpeg",
+            "mail": "counselling.samriddhi@gmail.com"
+          },
+          {
+            "name": "Ms. Anannya Sharma",
+            "position": "Consultant (Student Counsellor)",
+            "photo": "8.jpeg",
+            "mail": "as98@admin.iitd.ac.in"
+          },
+          {
+            "name": "Ms. Shalini Caroline Lyall",
+            "position": "Wellbeing Counsellor (OS)",
+            "photo": "9.jpeg",
+            "mail": "shalinilyall00@gmail.com"
+          },
+          {
+            "name": "Ms. Niharika Bhardwaj",
+            "position": "Consultant (Student Counsellor)",
+            "photo": "10.jpeg",
+            "mail": "nbhardwaj@admin.iitd.ac.in"
+          },
+          {
+            "name": "Ms. Jaya Jowel",
+            "position": "Project Counsellor",
+            "photo": "11.jpeg",
+            "mail": "forjayaa@gmail.com"
+          },
+          {
+            "name": "Mrs. Mamta Sinha",
+            "position": "Counsellor",
+            "photo": "12.jpeg",
+            "mail": "mssinha@admin.iitd.ac.in"
+          },
+          {
+            "name": "Ms. Preeti",
+            "position": "Consultant (Student Counsellor)",
+            "photo": "13.jpeg",
+            "mail": ""
+          },
+          {
+            "name": "Dr. Shachi Mathur",
+            "position": "Senior Counsellor",
+            "photo": "14.jpeg",
+            "mail": "a27079@admin.iitd.ac.in"
+          }
+        ]
+      }
+    }
+  },
+  "2024-25":{}
+}

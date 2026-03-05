@@ -1,0 +1,209 @@
+/* AntigravityFace.css */
+
+.ag-container {
+  position: relative;
+  width: 240px; /* Increased size to contain the animation comfortably */
+  height: 240px;
+  /* background-color: #20AA9D; Requested Box Color */
+  border-radius: 30px; /* Rounded corners for the box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure nothing spills out */
+  /* Optional: Center the component itself if not already centered by parent */
+  margin: 0 auto;
+}
+
+/* The Mouth/Top Arc */
+.ag-arc {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  animation: rotateArc 3.7s ease-in-out infinite;
+}
+
+.ag-arc path {
+  fill: none;
+  stroke: #56A8A0;
+  stroke-width: 20;
+  stroke-linecap: round; /* Rounded endpoints */
+  stroke-dasharray: 110 400; /* Full arc length ~110 */
+  /* Add dash animation to path */
+  animation: morphArcPath 3.7s ease-in-out infinite;
+}
+
+@keyframes morphArcPath {
+  /* Intro: Start from void (0), scale to dot (0.1), grow to arc */
+  0% {
+    stroke-dasharray: 0 400;
+    stroke-dashoffset: -55;
+    opacity: 1;
+    stroke-width: 0;
+  } /* Void (invisible by size) */
+  5% {
+    stroke-dasharray: 0.1 400;
+    stroke-dashoffset: -55;
+    opacity: 1;
+    stroke-width: 20;
+  } /* Dot */
+  15% {
+    stroke-dasharray: 110 400;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke-width: 20;
+  } /* Full Arc */
+
+  /* Outro: Shrink length AND width simultaneously to void */
+  85% {
+    stroke-dasharray: 110 400;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke-width: 20;
+  } /* Hold */
+  100% {
+    stroke-dasharray: 0.1 400;
+    stroke-dashoffset: -55;
+    opacity: 1;
+    stroke-width: 0;
+  } /* Void (invisible by size) */
+}
+
+/* The Eyes container to handle the split */
+.ag-eyes-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-eye {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #56A8A0;
+  position: absolute;
+}
+
+.ag-eye.left {
+  animation: splitLeft 3.7s ease-in-out infinite;
+}
+
+.ag-eye.right {
+  animation: splitRight 3.7s ease-in-out infinite;
+}
+
+/* --- Keyframe Animations --- */
+
+@keyframes rotateArc {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(0deg);
+  } /* Hold */
+  20% {
+    transform: rotate(-15deg);
+  } /* Anticipation: Go back */
+  35% {
+    transform: rotate(190deg);
+  } /* Overshoot Smile */
+  40% {
+    transform: rotate(180deg);
+  } /* Settle Smile */
+  60% {
+    transform: rotate(180deg);
+  } /* Hold for wink */
+  65% {
+    transform: rotate(160deg);
+  } /* Anticipate Spin: "Right Up" */
+  85% {
+    transform: rotate(360deg);
+  } /* Complete Spin */
+  100% {
+    transform: rotate(360deg);
+  } /* Sync with Void outro */
+}
+
+@keyframes splitLeft {
+  0% {
+    transform: translateX(0) scale(0);
+  } /* Void */
+  5% {
+    transform: translateX(0) scale(1);
+  } /* Dot */
+  20% {
+    transform: translateX(0) scale(1);
+  }
+  40% {
+    transform: translateX(-30px) scale(1);
+  } /* Move Left */
+  70% {
+    transform: translateX(-30px) scale(1);
+  }
+  85% {
+    transform: translateX(0) scale(1);
+  } /* Merge */
+  100% {
+    transform: translateX(0) scale(0);
+  } /* Void directly from Merge */
+}
+
+@keyframes splitRight {
+  0% {
+    transform: translateX(0) scale(0);
+    height: 40px;
+    border-radius: 50%;
+  } /* Void */
+  5% {
+    transform: translateX(0) scale(1);
+    height: 40px;
+    border-radius: 50%;
+  } /* Dot */
+  20% {
+    transform: translateX(0) scale(1);
+    height: 40px;
+    border-radius: 50%;
+  }
+  40% {
+    transform: translateX(30px) scale(1);
+    height: 40px;
+    border-radius: 50%;
+  } /* Move Right */
+  50% {
+    transform: translateX(30px) scale(1);
+    height: 40px;
+    border-radius: 50%;
+  }
+  55% {
+    transform: translateX(30px) scale(1);
+    height: 12px;
+    border-radius: 10px;
+  } /* WINK (Capsule) */
+  60% {
+    transform: translateX(30px) scale(1);
+    height: 40px;
+    border-radius: 50%;
+  } /* Open Eye */
+  70% {
+    transform: translateX(30px) scale(1);
+    height: 40px;
+    border-radius: 50%;
+  }
+  85% {
+    transform: translateX(0) scale(1);
+    height: 40px;
+    border-radius: 50%;
+  } /* Merge */
+  100% {
+    transform: translateX(0) scale(0);
+    height: 40px;
+    border-radius: 50%;
+  } /* Void directly from Merge */
+}
